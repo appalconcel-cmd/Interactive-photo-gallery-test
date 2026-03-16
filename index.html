@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
+
+    <div class="thumbnails">
+        <img class="preview" 
+             alt="Golden Retriever Pup" 
+             src="images/solar_pup.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+
+        <img class="preview" 
+             alt="DogDay" 
+             src="images/dogday.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+
+        <img class="preview" 
+             alt="CraftyCorn" 
+             src="images/craftycorn.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+             
+        <img class="preview" 
+             alt="CatNap" 
+             src="images/catnap.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
