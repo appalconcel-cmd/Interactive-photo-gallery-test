@@ -1,31 +1,17 @@
-/* Interactive Photo Gallery Logic */
-
 function upDate(previewPic) {
-  // 1. Log to console to verify the event and data
-  console.log("Mouse over event triggered!");
-  console.log("Alt text: " + previewPic.alt);
-  console.log("Source: " + previewPic.src);
+  console.log("Hovering over: " + previewPic.alt);
 
-  // 2. Select the display div using its ID
   let displayBox = document.getElementById('image');
 
-  // 3. Update the text to match the image's alt attribute
+  // Update text and background image URL
   displayBox.innerHTML = previewPic.alt;
-
-  // 4. Update the background image using the source
-  // Remember: the path must be wrapped in url('')
   displayBox.style.backgroundImage = "url('" + previewPic.src + "')";
 }
 
 function unDo() {
-  // 1. Select the display div
   let displayBox = document.getElementById('image');
 
-  // 2. Reset the background image to empty
+  // Reset to original state
   displayBox.style.backgroundImage = "url('')";
-
-  // 3. Reset the text to the original instruction
   displayBox.innerHTML = "Hover over an image below to display here.";
-  
-  console.log("Mouse out: Display reset.");
 }
